@@ -7,9 +7,9 @@ const state={
 
 
 module.exports.connect= async function(done){
-    const url="mongodb://localhost:27017";
+    // const url="mongodb://localhost:27017";
 
-    // const url='mongodb+srv://athul:asbupsilonno1@cluster0.223ob.mongodb.net';
+    const url='mongodb+srv://athul:asbupsilonno1@cluster0.223ob.mongodb.net';
 
     const dbname='expensetracker2';
   
