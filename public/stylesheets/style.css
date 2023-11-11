@@ -1,0 +1,56 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  /* overflow-x:hidden; */
+}
+
+body,html{
+  min-height:100vh;
+  width:100%
+}
+
+.form-control{
+  border:1px solid #000;
+}
+
+.enter-details .form-control{
+  border:1px solid 	#311183;
+  box-shadow: none;
+}
+.enter-details label{
+  color:#311183;
+}
+
+.enter-details input[type="file"] {
+  position: absolute;
+  z-index: -1;
+  top: 10px;
+  left: 8px;
+  font-size: 17px;
+  color: #b8b8b8;
+  visibility: hidden;
+}
+.enter-details .button-wrap {
+  position: relative;
+}
+.enter-details .button {
+  display: inline-block;
+  padding: 12px 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  border:1px solid #311183;
+  color: #311183;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #fff;
+}
+
+.enter-details .submit-button{
+background-color:#311183;
+}
+
+.display-details .card-header{
+  background-color:#311183;
+  color:azure;
+}

@@ -1,0 +1,97 @@
+
+<section class="display-details mt-3" id="display-details">
+    {{#each expenseList}}
+
+    <div class="card">
+        <style>
+            .card-header .card-title{
+
+font-size:larger;
+text-transform: capitalize;
+            }
+        </style>
+  <div class="card-header d-flex justify-content-between">
+      <span class="font-weight-bold inputDateCollector">{{this.inputDate}}</span>
+      <span class="font-weight-bold inputAmountCollector">₹{{this.inputAmount}}</span>
+
+  </div>
+  <div class="card-body">
+ 
+   <p><span class="font-weight-bold">Items: </span><span class="card-text">{{this.inputItems}}</span></p>
+   <p><span class="font-weight-bold text-success">Mode Of Payment: </span><span class="card-text">{{this.modeOfPayment}}</span></p>
+
+  {{#if this.filename}}
+  <img src="images/{{this.filename}}" class="img-fluid img-responsive d-block mx-auto" alt="" srcset="">
+  {{else}}
+  <p class="card-text alert-warning p-2">No image uploaded</p>
+  {{/if}}
+  </div>
+  <div class="card-footer">
+    <a href="/delete-detail" type="button" class="btn btn-outline-danger" style="box-shadow:none;"data-toggle="modal" data-target="#exampleModal">Delete Transaction</a>
+  </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title alert-danger alert text-center w-100 p-2 mx-auto" id="exampleModalLabel">Delete the expense?</h5>
+      </div>
+      <div class="modal-body">
+      <div class="card-header d-flex justify-content-between">
+      <span class="font-weight-bold inputDateCollector">{{this.inputDate}}</span>
+      <span class="font-weight-bold inputAmountCollector">₹{{this.inputAmount}}</span>
+
+  </div>
+  <div class="card-body">
+ 
+   <p><span class="font-weight-bold">Items: </span><span class="card-text">{{this.inputItems}}</span></p>
+   <p><span class="font-weight-bold text-success">Mode Of Payment: </span><span class="card-text">{{this.modeOfPayment}}</span></p>
+
+  {{#if this.filename}}
+  <img src="images/{{this.filename}}" class="img-fluid img-responsive d-block mx-auto" alt="" srcset="">
+  {{else}}
+  <p class="card-text alert-warning p-2">No image uploaded</p>
+  {{/if}}
+  </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel</button>
+       
+       <form method="post" action="/delete-expense">
+<input type="hidden" name="expenseId" value="{{this._id}}">
+ <button type="submit" class="btn btn-danger">Delete</button>
+
+</form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    
+    {{/each}}
+<script>
+const monthArr=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var inputDate=document.querySelectorAll('.inputDateCollector');
+var dateArr=[];
+for(let i=0;i<inputDate.length;i++){
+    dateArr.push(inputDate[i].innerHTML.split('-'));
+}
+
+for(let i=0;i<inputDate.length;i++){
+    console.log(dateArr[i])
+    let month=monthArr[dateArr[i][1]-1];
+    let finalDate=dateArr[i][2]+" "+month+" "+dateArr[i][0];
+    inputDate[i].innerHTML=finalDate;
+}
+
+
+
+
+</script>
+</section>

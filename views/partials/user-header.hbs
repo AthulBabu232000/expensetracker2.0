@@ -1,0 +1,57 @@
+<style>
+  nav{
+    background-color:		#2b0f71;
+    
+    
+  }
+  nav a{
+    color:azure !important;
+  }
+  nav a:hover{
+    color:#d896ff;
+  }
+  .fa-solid.fa-heart{
+    color:	azure;
+  }
+  button{
+    border:1px solid azure !important;
+  }
+  .totalExpense{
+    background-color:rgb(240, 247, 255);
+    padding-top:10px;
+    padding-bottom:10px;
+    color:#2b0f71;
+  }
+
+</style>
+
+<nav class="navbar navbar-expand-lg">
+  <a class="navbar-brand" href="#">Expense Tracker</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <i class="fa-solid fa-heart"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+       <li class="nav-item active">
+        <a class="nav-link" href="/enter-details">Add Expense</a>
+      </li>
+        <li class="nav-item active">
+        <a class="nav-link" href="/display-details">All Expenses</a>
+      </li>
+     
+
+    </ul>
+
+  </div>
+</nav>
+<section class="totalExpense" id="totalExpense">
+<div class="row mx-auto">
+  <div class="col-md-12 mx-auto d-flex justify-content-end">
+    <span class="font-weight-bold" >TOTAL: ₹<span id="totalAmount">{{totalAmount}}</span> </span>
+  </div>
+</div>
+</section>

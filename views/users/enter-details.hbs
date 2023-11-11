@@ -1,0 +1,38 @@
+<section class="enter-details" id="enter-details">
+
+<div class="row mx-auto">
+    <div class="col-md-6 mx-auto">
+        
+<form class="form" method="post" action="/enter-details"enctype="multipart/form-data">
+  <div class="form-group">
+    <label for="modeOfPayment">Mode Of Payment</label>
+<select class="form-select form-control"  id="modeOfPayment" name="modeOfPayment">
+  <option selected>Select payment method</option>
+  <option value="Online(Google Pay)">Online(GooglePay)</option>
+  <option value="Online(Others)">Online(Others)</option>
+  <option value="Offline(Cash)">Offline(Cash)</option>
+</select>
+  </div>
+   <div class="form-group">
+    <label for="inputItems">Items</label>
+    <input required type="text" class="form-control"  placeholder="books, pencil, laptop" id="inputItems" name="inputItems">
+  </div>
+    <div class="form-group">
+    <label for="inputAmount">Amount⟨₹⟩</label>
+    <input required type="number" class="form-control" id="inputAmount" name="inputAmount" min="0">
+  </div>
+  <div class="form-group">
+    <label for="inputDate">Date Of Payment</label>
+    <input required type="date"  min="1997-01-01" max="2030-12-31" class="form-control" id="inputDate" name="inputDate">
+  </div>
+    <div class="button-wrap">
+    <label for="inputImage" class="button">Upload Image</label>
+    <input required type="file" class="form-control" id="inputImage" name="inputImage">
+  </div>
+  <button type="submit" class="btn submit-button d-block w-100 mt-3 text-light">Add</button>
+</form>
+    </div>
+</div>
+
+
+</section>
