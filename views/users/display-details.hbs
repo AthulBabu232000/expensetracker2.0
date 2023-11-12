@@ -27,14 +27,14 @@ text-transform: capitalize;
   {{/if}}
   </div>
   <div class="card-footer">
-    <a href="/delete-detail" type="button" class="btn btn-outline-danger" style="box-shadow:none;"data-toggle="modal" data-target="#exampleModal">Delete Transaction</a>
+    <a href="/delete-detail" type="button" class="btn btn-outline-danger" style="box-shadow:none;"data-toggle="modal" data-target="#exampleModal{{this._id}}">Delete Transaction</a>
   </div>
 </div>
 
 
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal{{this._id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
